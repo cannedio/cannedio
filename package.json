@@ -1,0 +1,32 @@
+{
+  "name": "node-cannedio",
+  "version": "1.0.0",
+  "description": "Canned.IO API Integration Library for NodeJS",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "bin": "bin"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cannedio/node-cannedio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cannedio/node-cannedio/issues"
+  },
+  "homepage": "https://github.com/cannedio/node-cannedio#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "axios": "^0.18.0",
+    "joi": "^14.3.1",
+    "jslint": "^0.12.0",
+    "lodash": "^4.17.11"
+  }
+}
