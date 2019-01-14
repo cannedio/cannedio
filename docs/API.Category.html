@@ -28,9 +28,10 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Category</h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>
+            <span class="ancestors"><a href="API.html">API</a>.</span>Category</h2>
         
-            <div class="class-description">Singleton class that handle every Category requests..</div>
+            <div class="class-description">Singleton class that handle every Category requests.</div>
         
     
 </header>
@@ -155,7 +156,7 @@
     
 
     
-    <h4 class="name" id="create"><span class="type-signature"></span>create<span class="signature">(categoryObj)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="create"><span class="type-signature">(async) </span>create<span class="signature">(categoryObj)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -218,7 +219,7 @@
 
             
 
-            <td class="description last">Category classe with all data.</td>
+            <td class="description last">Category entity instance.</td>
         </tr>
 
     
@@ -259,7 +260,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line54">line 54</a>
+        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line81">line 81</a>
     </li></ul></dd>
     
 
@@ -285,10 +286,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Promise.
-</div>
-
 
 
 <dl>
@@ -297,7 +294,7 @@
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">Promise</span>
 
 
     </dd>
@@ -308,6 +305,11 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const catData = new CannedIO.entity.category(  null, // id  'my new category', // label  '#ff00ff' // color);CannedIO.api.category.create(catData).then(newCat => console.log('success:', newCat.toJSON())).catch(error => console.log('something is wrong:', error));</code></pre>
+
+
 
         
             
@@ -315,7 +317,7 @@
     
 
     
-    <h4 class="name" id="get"><span class="type-signature"></span>get<span class="signature">(categoryId)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    <h4 class="name" id="get"><span class="type-signature">(async) </span>get<span class="signature">(categoryId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -416,7 +418,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line23">line 23</a>
+        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line30">line 30</a>
     </li></ul></dd>
     
 
@@ -442,10 +444,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Promise.
-</div>
-
 
 
 <dl>
@@ -454,7 +452,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Object</span>
+<span class="param-type">Promise</span>
 
 
     </dd>
@@ -465,6 +463,11 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>CannedIO.api.category.get(categoryId).then(cat => console.log('success:', cat.toJSON())).catch(error => console.log('something is wrong:', error));</code></pre>
+
+
 
         
             
@@ -472,7 +475,7 @@
     
 
     
-    <h4 class="name" id="list"><span class="type-signature"></span>list<span class="signature">()</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="list"><span class="type-signature">(async) </span>list<span class="signature">()</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -524,7 +527,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line37">line 37</a>
+        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line51">line 51</a>
     </li></ul></dd>
     
 
@@ -550,10 +553,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Promise.
-</div>
-
 
 
 <dl>
@@ -562,7 +561,7 @@
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">Promise</span>
 
 
     </dd>
@@ -573,6 +572,11 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>CannedIO.api.category.list().then(list => console.log('I got', list.length, 'categories.')).catch(error => console.log('something is wrong:', error));</code></pre>
+
+
 
         
             
@@ -580,7 +584,7 @@
     
 
     
-    <h4 class="name" id="remove"><span class="type-signature"></span>remove<span class="signature">(categoryId)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="remove"><span class="type-signature">(async) </span>remove<span class="signature">(categoryId)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -681,7 +685,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line95">line 95</a>
+        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line139">line 139</a>
     </li></ul></dd>
     
 
@@ -707,10 +711,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Promise.
-</div>
-
 
 
 <dl>
@@ -719,7 +719,7 @@
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">Promise</span>
 
 
     </dd>
@@ -730,6 +730,11 @@
 
 
 
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>CannedIO.api.category.remove(categoryId).then(cat => console.log('success:', cat.toJSON())).catch(error => console.log('something is wrong:', error));</code></pre>
+
+
 
         
             
@@ -737,7 +742,7 @@
     
 
     
-    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">(categoryObj)</span><span class="type-signature"> &rarr; {object}</span></h4>
+    <h4 class="name" id="update"><span class="type-signature">(async) </span>update<span class="signature">(categoryObj)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
     
 
     
@@ -800,7 +805,7 @@
 
             
 
-            <td class="description last">Category classe with all data.</td>
+            <td class="description last">Category entity instance.</td>
         </tr>
 
     
@@ -841,7 +846,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line75">line 75</a>
+        <a href="api_category.js.html">api/category.js</a>, <a href="api_category.js.html#line112">line 112</a>
     </li></ul></dd>
     
 
@@ -867,10 +872,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    Promise.
-</div>
-
 
 
 <dl>
@@ -879,7 +880,7 @@
     </dt>
     <dd>
         
-<span class="param-type">object</span>
+<span class="param-type">Promise</span>
 
 
     </dd>
@@ -888,6 +889,11 @@
     
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// update an existing category (you can use a new instance as well).myCat.label = 'my updated category';myCat.color = '#00ff00';CannedIO.api.category.update(myCat).then(updatedCat => console.log('success:', updatedCat.toJSON())).catch(error => console.log('something is wrong:', error));</code></pre>
 
 
 
@@ -907,13 +913,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="API.Category.html">Category</a></li><li><a href="API.Response.html">Response</a></li><li><a href="API.User.html">User</a></li><li><a href="Config.html">Config</a></li><li><a href="Entity.Category.html">Category</a></li><li><a href="Entity.Response.html">Response</a></li><li><a href="Entity.User.html">User</a></li><li><a href="EntityBase.html">EntityBase</a></li></ul><h3>Namespaces</h3><ul><li><a href="CaneedIO.API.html">API</a></li><li><a href="CaneedIO.Entity.html">Entity</a></li><li><a href="CannedIO.html">CannedIO</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="API.Category.html">Category</a></li><li><a href="API.Response.html">Response</a></li><li><a href="API.User.html">User</a></li><li><a href="Config.html">Config</a></li><li><a href="Entity.Category.html">Category</a></li><li><a href="Entity.EntityBase.html">EntityBase</a></li><li><a href="Entity.Response.html">Response</a></li><li><a href="Entity.User.html">User</a></li></ul><h3>Namespaces</h3><ul><li><a href="API.html">API</a></li><li><a href="CannedIO.html">CannedIO</a></li><li><a href="Entity.html">Entity</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 14 2019 11:21:46 GMT-0300 (Horário de Verão Brasil Central)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 14 2019 15:05:49 GMT-0300 (Horário de Verão Brasil Central)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -28,7 +28,9 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Config<span class="signature">()</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Config</h2>
+        
+            <div class="class-description">Singleton class that keep all API settings.</div>
         
     
 </header>
@@ -38,19 +40,7 @@
     
         
 
-    
 
-    
-    <h4 class="name" id="Config"><span class="type-signature"></span>new Config<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Keep all configurations and preferences.
-</div>
 
 
 
@@ -83,6 +73,13 @@
     
 
     
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+        <ul>
+            <li>Bruno Morceli - pirofagista@gmail.com</li>
+        </ul>
+    </dd>
+    
 
     
 
@@ -93,7 +90,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="config.js.html">config.js</a>, <a href="config.js.html#line5">line 5</a>
+        <a href="config.js.html">config.js</a>, <a href="config.js.html#line24">line 24</a>
     </li></ul></dd>
     
 
@@ -118,6 +115,11 @@
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const CaneedIO = require('node-cannedio');// you must call the setup method at least once while running the application.const token = 'MY_API_TOKEN';const setupError = Canned.config.setup(token);if (setupError) {  console.error(setupError);  process.exit();}// start all requests...</code></pre>
 
 
 
@@ -147,115 +149,7 @@
     
 
     
-    <h4 class="name" id="isValid"><span class="type-signature"></span>isValid<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Check if the configuration is valid.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="config.js.html">config.js</a>, <a href="config.js.html#line21">line 21</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Operation result.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="setup"><span class="type-signature"></span>setup<span class="signature">(token, language<span class="signature-attributes">opt</span>, endpoint<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="setup"><span class="type-signature"></span>setup<span class="signature">(token, language<span class="signature-attributes">opt</span>, endpoint<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {string}</span></h4>
     
 
     
@@ -309,7 +203,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
             
@@ -331,7 +225,7 @@
                 </td>
             
 
-            <td class="description last">Access token given by CannedIO.</td>
+            <td class="description last">Access token given by CannedIO API.</td>
         </tr>
 
     
@@ -344,7 +238,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
             
@@ -383,7 +277,7 @@
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
             
@@ -450,7 +344,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="config.js.html">config.js</a>, <a href="config.js.html#line32">line 32</a>
+        <a href="config.js.html">config.js</a>, <a href="config.js.html#line41">line 41</a>
     </li></ul></dd>
     
 
@@ -476,7 +370,23 @@
 <h5>Returns:</h5>
 
         
+<div class="param-desc">
+    Return null whether success, otherwise an error message.
+</div>
 
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
 
     
 
@@ -500,13 +410,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="API.Category.html">Category</a></li><li><a href="API.Response.html">Response</a></li><li><a href="API.User.html">User</a></li><li><a href="Config.html">Config</a></li><li><a href="Entity.Category.html">Category</a></li><li><a href="Entity.Response.html">Response</a></li><li><a href="Entity.User.html">User</a></li><li><a href="EntityBase.html">EntityBase</a></li></ul><h3>Namespaces</h3><ul><li><a href="CaneedIO.API.html">API</a></li><li><a href="CaneedIO.Entity.html">Entity</a></li><li><a href="CannedIO.html">CannedIO</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="API.CategoryAPI.html">CategoryAPI</a></li><li><a href="API.ResponseAPI.html">ResponseAPI</a></li><li><a href="API.UserAPI.html">UserAPI</a></li><li><a href="Config.html">Config</a></li><li><a href="Entity.CategoryEntity.html">CategoryEntity</a></li><li><a href="Entity.ResponseEntity.html">ResponseEntity</a></li><li><a href="Entity.UserEntity.html">UserEntity</a></li></ul><h3>Namespaces</h3><ul><li><a href="API.html">API</a></li><li><a href="CannedIO.html">CannedIO</a></li><li><a href="Entity.html">Entity</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 14 2019 11:21:46 GMT-0300 (Horário de Verão Brasil Central)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 14 2019 16:22:40 GMT-0300 (Horário de Verão Brasil Central)
 </footer>
 
 <script> prettyPrint(); </script>

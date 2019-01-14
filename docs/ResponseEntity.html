@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Category</title>
+    <title>JSDoc: Class: ResponseEntity</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: Category</h1>
+    <h1 class="page-title">Class: ResponseEntity</h1>
 
     
 
@@ -28,10 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>
-            <span class="ancestors"><a href="Entity.html">Entity</a>.</span>Category<span class="signature">(id<span class="signature-attributes">opt</span>, label<span class="signature-attributes">opt</span>, color<span class="signature-attributes">opt</span>, createdAt<span class="signature-attributes">opt</span>, updatedAt<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
-        
-            <div class="class-description">Category entity.</div>
+        <h2><span class="attribs"><span class="type-signature"></span></span>ResponseEntity<span class="signature">(id<span class="signature-attributes">opt</span>, label<span class="signature-attributes">opt</span>, response<span class="signature-attributes">opt</span>, categoryId<span class="signature-attributes">opt</span>, tags<span class="signature-attributes">opt</span>, createdAt<span class="signature-attributes">opt</span>, updatedAt<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -42,11 +39,9 @@
         
 
     
-    <h2>Constructor</h2>
-    
 
     
-    <h4 class="name" id="Category"><span class="type-signature"></span>new Category<span class="signature">(id<span class="signature-attributes">opt</span>, label<span class="signature-attributes">opt</span>, color<span class="signature-attributes">opt</span>, createdAt<span class="signature-attributes">opt</span>, updatedAt<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="ResponseEntity"><span class="type-signature"></span>new ResponseEntity<span class="signature">(id<span class="signature-attributes">opt</span>, label<span class="signature-attributes">opt</span>, response<span class="signature-attributes">opt</span>, categoryId<span class="signature-attributes">opt</span>, tags<span class="signature-attributes">opt</span>, createdAt<span class="signature-attributes">opt</span>, updatedAt<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -122,7 +117,7 @@
                 </td>
             
 
-            <td class="description last">Category UUID.</td>
+            <td class="description last">response UUID.</td>
         </tr>
 
     
@@ -168,7 +163,7 @@
 
         <tr>
             
-                <td class="name"><code>color</code></td>
+                <td class="name"><code>response</code></td>
             
 
             <td class="type">
@@ -195,12 +190,90 @@
             
                 <td class="default">
                 
-                    '#e3e3e3'
+                    ''
                 
                 </td>
             
 
-            <td class="description last">Hexadecimal color with 7 characters (including '#', e.g.: '#ff00ff').</td>
+            <td class="description last">Response itself. Size: 2-10240 characters.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>categoryId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+
+            <td class="description last">Category UUID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    []
+                
+                </td>
+            
+
+            <td class="description last">Response tags. Size: 2-32 characters.</td>
         </tr>
 
     
@@ -309,13 +382,6 @@
     
 
     
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li>Bruno Morceli - pirofagista@gmail.com</li>
-        </ul>
-    </dd>
-    
 
     
 
@@ -326,7 +392,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="entities_category.js.html">entities/category.js</a>, <a href="entities_category.js.html#line12">line 12</a>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line25">line 25</a>
     </li></ul></dd>
     
 
@@ -358,17 +424,6 @@
     </div>
 
     
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li>EntityBase</li>
-    </ul>
-
-
-    
 
     
 
@@ -385,7 +440,7 @@
 
         
             
-<h4 class="name" id="color"><span class="type-signature"></span>color<span class="type-signature"></span></h4>
+<h4 class="name" id="categoryId"><span class="type-signature"></span>categoryId<span class="type-signature"></span></h4>
 
 
 
@@ -422,7 +477,7 @@
 
         <tr>
             
-                <td class="name"><code>color</code></td>
+                <td class="name"><code>categoryId</code></td>
             
 
             <td class="type">
@@ -438,7 +493,7 @@
 
             
 
-            <td class="description last">Hexadecimal color with 7 characters (including '#', e.g.: '#ff00ff').</td>
+            <td class="description last">Category UUID.</td>
         </tr>
 
     
@@ -477,7 +532,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="entities_category.js.html">entities/category.js</a>, <a href="entities_category.js.html#line32">line 32</a>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line38">line 38</a>
     </li></ul></dd>
     
 
@@ -587,7 +642,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="entities_category.js.html">entities/category.js</a>, <a href="entities_category.js.html#line35">line 35</a>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line44">line 44</a>
     </li></ul></dd>
     
 
@@ -658,7 +713,7 @@
 
             
 
-            <td class="description last">Category UUID.</td>
+            <td class="description last">response UUID.</td>
         </tr>
 
     
@@ -697,7 +752,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="entities_category.js.html">entities/category.js</a>, <a href="entities_category.js.html#line26">line 26</a>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line29">line 29</a>
     </li></ul></dd>
     
 
@@ -807,7 +862,227 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="entities_category.js.html">entities/category.js</a>, <a href="entities_category.js.html#line29">line 29</a>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line32">line 32</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="response"><span class="type-signature"></span>response<span class="type-signature"></span></h4>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>response</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Response itself. Size: 2-10240 characters.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line35">line 35</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="tags"><span class="type-signature"></span>tags<span class="type-signature"></span></h4>
+
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array.&lt;string></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Response tags. Size: 2-32 characters.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line41">line 41</a>
     </li></ul></dd>
     
 
@@ -917,7 +1192,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="entities_category.js.html">entities/category.js</a>, <a href="entities_category.js.html#line38">line 38</a>
+        <a href="entities_response.js.html">entities/response.js</a>, <a href="entities_response.js.html#line47">line 47</a>
     </li></ul></dd>
     
 
@@ -951,13 +1226,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="API.Category.html">Category</a></li><li><a href="API.Response.html">Response</a></li><li><a href="API.User.html">User</a></li><li><a href="Config.html">Config</a></li><li><a href="Entity.Category.html">Category</a></li><li><a href="Entity.EntityBase.html">EntityBase</a></li><li><a href="Entity.Response.html">Response</a></li><li><a href="Entity.User.html">User</a></li></ul><h3>Namespaces</h3><ul><li><a href="API.html">API</a></li><li><a href="CannedIO.html">CannedIO</a></li><li><a href="Entity.html">Entity</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="API.CategoryAPI.html">CategoryAPI</a></li><li><a href="API.ResponseAPI.html">ResponseAPI</a></li><li><a href="API.UserAPI.html">UserAPI</a></li><li><a href="Config.html">Config</a></li><li><a href="Entity.CategoryEntity.html">CategoryEntity</a></li><li><a href="EntityBase.html">EntityBase</a></li><li><a href="ResponseEntity.html">ResponseEntity</a></li><li><a href="UserEntity.html">UserEntity</a></li></ul><h3>Namespaces</h3><ul><li><a href="API.html">API</a></li><li><a href="CannedIO.html">CannedIO</a></li><li><a href="Entity.html">Entity</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 14 2019 15:05:49 GMT-0300 (Horário de Verão Brasil Central)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jan 14 2019 15:56:12 GMT-0300 (Horário de Verão Brasil Central)
 </footer>
 
 <script> prettyPrint(); </script>
