@@ -7,5 +7,5 @@ Canned.IO API Integration Library for NodeJS
 console.log(hello)
 ```
 
-![Image of Yaktocat](https://github.com/cannedio/node-cannedio/tree/master/lib/images/steps.jpg)
+![Steps](https://github.com/cannedio/node-cannedio/blob/master/images/steps.jpg)
 
